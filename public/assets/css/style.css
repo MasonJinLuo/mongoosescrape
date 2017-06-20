@@ -1,0 +1,54 @@
+#navi , a.navi , #top, #unload {
+	background-color: #730099;
+	color: white;
+	text-shadow: 2px 2px 5px black;
+	padding: 1px;
+}
+
+
+#scrapeButton{
+	font-size: 25px;
+}
+
+#top {
+	text-align: center;
+    background-image: url("../images/topbg.jpg");
+	width: 100%;
+	padding: 100px;
+}
+
+#topTitle{
+	font-size: 125px
+}
+
+.entryHeader {
+	background-color: #1a0013; 
+}
+
+
+.entryBody{
+	background-color: #4d0039;
+	padding: 10px;
+}
+
+.entryWrapper {
+	margin: 20px;
+	border-color: #730099;
+}
+
+.saveArticle, #addNoteButton, #deleteArticle{
+	float: right;
+}
+
+
+#bodyinput{
+	color: black;
+	margin: 5px;
+}
+
+
+#dropArticleNotes, #modal-title{
+	color: black;
+	font-size: 25px;
+	text-shadow: 0px 0px 0px black;
+}

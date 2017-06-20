@@ -1,0 +1,42 @@
+	<div id="unload">
+		{{#unless scraped}}
+			<h2 align="center"> Press "Scrape New Articles" to start </h2> 
+		{{/unless}}
+
+		{{#if scraped}}
+			{{#each scraped}}
+				<div class="panel entryWrapper" data-id="{{this.id}}">
+					<div class="panel-heading entryHeader">
+						 <h3 class='panel-title entryTitle'>{{this.title}}</h3>
+					</div>
+					<div class="panel-body entryBody">
+						{{this.link}}
+						<button class="btn btn-danger saveArticle" data-toggle="modal" data-target="#saveArticlesModal">Save Article</button>
+					</div>
+				</div>
+			{{/each}}
+		{{/if}}
+
+	</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Articles Scraped</h4>
+      </div>
+      <div class="modal-body">
+        <p>Articles Have Been Scraped!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
