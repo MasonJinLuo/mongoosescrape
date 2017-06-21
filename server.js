@@ -19,6 +19,7 @@ mongoose.Promise = Promise;
 
 // Initialize Express
 var app = express();
+var port = process.env.PORT || 3000;
 
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({
@@ -28,7 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://heroku_lvsl5vlq:fgbmfokndipb5a87m0k4mqt8h@ds153609.mlab.com:53609/heroku_lvsl5vlq");
+mongoose.connect("mongodb:heroku_lvsl5vlq:fgbmfokndipb5a87m0k4mqt8h@ds153609.mlab.com:53609/heroku_lvsl5vlq");
 var db = mongoose.connection;
 
 db.on("error", function(error) {
@@ -209,6 +210,6 @@ app.post("/submitnote/:id", function (req, res){
 
 
 
-app.listen(3000, function() {
-  console.log("App running on port 3000!");
+app.listen(port, function() {
+  console.log("App listening on PORT " + port);
 });
